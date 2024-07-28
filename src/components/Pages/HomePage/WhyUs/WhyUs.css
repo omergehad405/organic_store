@@ -1,0 +1,45 @@
+.why-us {
+    margin-top: 5rem;
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+  
+      .image {
+        img {
+          max-width: 650px;
+        }
+      }
+      .info {
+        .box {
+          margin-top: 3rem;
+          h3 {
+            font-size: 20px;
+            font-family: "Pacifico", sans-serif;
+          }
+  
+          p {
+            line-height: 1.5;
+            color: #777;
+            padding-top: 1rem;
+          }
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .why-us {
+      .container {
+        flex-direction: column;
+        gap: 1rem;
+        .image {
+          img {
+            max-width: 350px;
+          }
+        }
+      }
+    }
+  }
+  

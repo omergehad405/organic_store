@@ -1,0 +1,69 @@
+.about {
+  position: relative;
+  margin-bottom: 2rem;
+  .container {
+    .info {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+
+      .info-box {
+        max-width: 300px;
+        text-align: center;
+
+        h1 {
+          color: var(--green-color);
+          font-size: 5rem;
+          font-weight: bold;
+          font-family: "Pacifico", sans-serif;
+        }
+
+        span {
+          font-family: "Pacifico", sans-serif;
+          color: var(--gray-color);
+          font-size: 20px;
+        }
+
+        p {
+          color: #777;
+          font-size: 14px;
+          padding-top: 15px;
+          line-height: 2;
+        }
+      }
+    }
+
+    .images {
+      margin-top: 4rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      gap: 15px;
+
+      .image {
+        max-width: 500px;
+        position: relative;
+
+        .panner {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0,60%);
+          z-index: 999;
+          opacity: 0;
+          transition: 0.5s;
+        }
+
+        img {
+          width: 100%;
+        }
+
+        &:hover .panner{
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

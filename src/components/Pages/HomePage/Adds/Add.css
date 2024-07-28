@@ -1,0 +1,44 @@
+.add {
+  background-image: url(../banners2.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+  height: 100vh;
+  .container {
+    .info {
+      text-align: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      h1 {
+        font-size: 4rem;
+        font-weight: bold;
+      }
+
+      p {
+        font-family: "Pacifico", sans-serif;
+        font-size: 1.8rem;
+        text-transform: capitalize;
+        padding: 2rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .add {
+    .container {
+      .info {
+        h1 {
+          font-size: 3rem;
+        }
+        P {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}

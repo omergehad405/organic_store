@@ -1,0 +1,14 @@
+.btn {
+  background-color: var(--green-color);
+  text-transform: uppercase;
+  border: none;
+  color: white;
+  padding: 16px 25px;
+  font-weight: bold;
+  transition: 0.5s;
+  cursor: pointer;
+  &:hover {
+    background-color: var(--gray-color);
+    border-color: var(--grey-color);
+  }
+}

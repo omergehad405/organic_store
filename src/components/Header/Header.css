@@ -1,0 +1,120 @@
+header {
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 80px;
+    }
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 25px;
+      z-index: 999;
+
+      li {
+        cursor: pointer;
+        a {
+          color: #a6a6a6;
+          font-weight: bold;
+          text-transform: uppercase;
+          transition: 0.5s;
+        }
+        span {
+          color: #a6a6a6;
+          transition: 0.5s;
+        }
+        &:hover a,
+        &:hover span,
+        & a.active {
+          color: var(--green-color);
+        }
+      }
+
+      .close {
+        display: none;
+      }
+    }
+
+    .bars {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    position: relative;
+    .container {
+      margin: 0 20px;
+      .navbar {
+        position: absolute;
+        top: 0;
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 3rem;
+        padding: 2rem;
+        background-color: white;
+        width: 100%;
+        min-height: 100vh;
+        left: -250rem;
+        transition: 0.5s;
+
+        &.opened {
+          left: 0;
+          opacity: 1;
+        }
+        &.closed {
+          left: -250rem;
+          opacity: 0;
+        }
+
+        li {
+          a {
+            color: #777;
+            font-size: 14px;
+          }
+          span {
+            color: #777;
+
+            i {
+              transform: rotate(-90deg);
+            }
+          }
+
+          &:hover a,
+          &:hover span,
+          &:hover .active {
+            color: black;
+          }
+
+          &.sideNavbar {
+            ul {
+              position: absolute;
+              background-color: black;
+              transform: translateX(50%);
+            }
+          }
+        }
+
+        .close {
+          display: block;
+          position: absolute;
+          right: 25px;
+          font-size: 22px;
+        }
+      }
+
+      .bars {
+        display: block;
+        font-size: 23px;
+      }
+    }
+  }
+}

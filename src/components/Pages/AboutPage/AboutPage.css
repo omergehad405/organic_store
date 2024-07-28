@@ -1,0 +1,225 @@
+.about-page {
+  .page-title {
+    margin: 1rem 0 5rem;
+    width: 100%;
+    background-color: #eee;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-transform: capitalize;
+    font-size: 18px;
+
+    h5 {
+      a {
+        color: #777;
+      }
+
+      span {
+        color: black;
+      }
+    }
+    .page-name {
+      color: var(--gray-color);
+      font-weight: bolder;
+    }
+  }
+
+  .home {
+    .home-info {
+      margin-bottom: 5rem;
+      .container {
+        text-align: center;
+
+        h1 {
+          margin-bottom: 1rem;
+        }
+        span {
+          font-weight: bold;
+          text-transform: capitalize;
+        }
+        p {
+          color: #999;
+          font-size: 15px;
+          line-height: 1.5;
+          margin-top: 1rem;
+        }
+      }
+    }
+
+    .numbers {
+      background-color: var(--green-color);
+      position: relative;
+
+      .numbers-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        text-align: center;
+        color: white;
+        padding: 5rem 0;
+        text-transform: capitalize;
+
+        h1 {
+          font-size: 2.5rem;
+          padding-bottom: 5px;
+        }
+        p {
+          font-size: 13px;
+        }
+      }
+
+      .image {
+        width: 100%;
+        transform: rotate(180deg);
+        height: 50vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url("../post6.jpg");
+      }
+    }
+
+    .services {
+      padding: 4rem 0 7rem;
+      background-color: #eee;
+      .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        gap: 15px;
+
+        .service {
+          max-width: 370px;
+          .title {
+            font-size: 19px;
+            font-weight: bold;
+          }
+          p {
+            text-align: center;
+            color: #777;
+            font-size: 16px;
+            line-height: 1.5;
+            margin-top: 1rem;
+          }
+        }
+      }
+    }
+
+    .features {
+      margin: 4rem 0;
+      .title {
+        text-transform: capitalize;
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+      }
+      > p {
+        color: #777;
+        text-align: center;
+      }
+      .container {
+        margin-top: 2rem;
+        .skils {
+          .skil {
+            margin-bottom: 2rem;
+
+            p {
+              color: #777;
+              text-transform: capitalize;
+              padding-bottom: 5px;
+            }
+
+            div {
+              max-width: 100%;
+              height: 15px;
+              background-color: #eee;
+              position: relative;
+
+              .skil-length {
+                position: absolute;
+                background-color: var(--green-color);
+                width: 0;
+                height: 100%;
+                color: white;
+                transition: 0.5s;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .founder {
+      margin-bottom: 3rem;
+      width: 100%;
+      height: 50vh;
+      background-image: url("../banners2.jpg");
+      background-repeat: no-repeat;
+
+      background-size: cover;
+      position: relative;
+      .info {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        max-width: 650px;
+
+        h1 {
+          color: black;
+          text-transform: capitalize;
+          padding-bottom: 20px;
+        }
+        p {
+          color: #777;
+          line-height: 1.5;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .about-page {
+    .home {
+      .numbers {
+        .image {
+          width: 100%;
+          transform: rotate(180deg);
+          height: 20vh;
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-image: url("../post6.jpg");
+        }
+      }
+      .services {
+        padding-bottom: 4rem;
+        .container {
+          gap: 30px;
+        }
+      }
+      .founder {
+        margin-bottom: 0;
+        background-position: center;
+        .info {
+          width: 350px;
+          top: 10%;
+          left: 50%;
+          transform: translateX(-50%);
+          h1 {
+            color: black;
+            text-transform: capitalize;
+            padding-bottom: 20px;
+            font-size: 2rem;
+          }
+          p {
+            color: #777;
+            line-height: 1.5;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}

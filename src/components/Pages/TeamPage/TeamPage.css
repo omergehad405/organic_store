@@ -1,0 +1,169 @@
+.team-page {
+  .page-title {
+    margin: 1rem 0 5rem;
+    width: 100%;
+    background-color: #eee;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-transform: capitalize;
+    font-size: 18px;
+
+    h5 {
+      a {
+        color: #777;
+      }
+
+      span {
+        color: black;
+      }
+    }
+    .page-name {
+      color: var(--gray-color);
+      font-weight: bolder;
+    }
+  }
+
+  .team {
+    margin-bottom: 5rem;
+    .container {
+      .team_info {
+        margin-bottom: 1rem;
+        .title {
+          text-transform: capitalize;
+          font-size: 2rem;
+        }
+        p {
+          text-align: center;
+          color: #777;
+          line-height: 1.5;
+        }
+      }
+      .team-worker {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        gap: 1rem;
+
+        > div {
+          width: 320px;
+          height: 350px;
+          background-color: black;
+          position: relative;
+          overflow: hidden;
+
+          img {
+            width: 100%;
+            height: 100%;
+          }
+
+          .worker_info {
+            position: absolute;
+            bottom: -350px;
+            background-color: rgba(0, 0, 0, 0.7);
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 1rem;
+            text-align: center;
+            color: white;
+            transition: 0.5s;
+
+            .title {
+              color: white;
+              font-size: 1.7rem;
+            }
+
+            span {
+              color: var(--green-color);
+              text-transform: capitalize;
+              font-weight: bold;
+            }
+            p {
+              line-height: 1.5;
+            }
+          }
+
+          &:hover {
+            .worker_info {
+              bottom: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .team_skils {
+    .title {
+      text-transform: capitalize;
+      padding-bottom: 2rem;
+    }
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+
+      .info {
+        width: 650px;
+        p {
+          color: #777;
+          line-height: 2;
+        }
+      }
+
+      .skils {
+        flex-grow: 1;
+        .skil {
+          margin-bottom: 2rem;
+
+          p {
+            color: #777;
+            text-transform: capitalize;
+            padding-bottom: 5px;
+          }
+
+          div {
+            max-width: 100%;
+            height: 15px;
+            background-color: #eee;
+            position: relative;
+
+            .skil-length {
+              position: absolute;
+              background-color: var(--green-color);
+              width: 0;
+              height: 100%;
+              color: white;
+              transition: 0.5s;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .team-page {
+    .team {
+      margin-bottom: 2rem;
+      .container {
+        .team-worker {
+          justify-content: center;
+        }
+      }
+    }
+    .team_skils {
+      .container {
+        justify-content: center;
+      }
+    }
+  }
+}

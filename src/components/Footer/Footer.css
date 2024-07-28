@@ -1,0 +1,61 @@
+:root {
+  --green-color: #679509;
+  --gray-color: #505050;
+}
+
+footer {
+  background-image: url("../footer-widgets-bg.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  width: 100%;
+  min-height: 50vh;
+
+  .container {
+    padding-top: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    div {
+      max-width: 250px;
+      height: 250px;
+
+      h3 {
+        font-size: 1.5rem;
+        text-transform: capitalize;
+        padding-bottom: 1rem;
+      }
+
+      ul {
+        li {
+          color: #777;
+          padding-bottom: 1rem;
+
+          a {
+            color: #777;
+            text-transform: capitalize;
+            cursor: pointer;
+
+            &:hover {
+              color: var(--green-color);
+            }
+          }
+        }
+      }
+      &:last-child {
+        ul {
+          li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
