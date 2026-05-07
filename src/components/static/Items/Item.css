@@ -1,0 +1,62 @@
+.product {
+  position: relative;
+  cursor: pointer;
+  text-align: center;
+  img {
+    width: 250px;
+  }
+  .info {
+    padding-top: 20px;
+    opacity: 1;
+    transition: 0.5s;
+    p {
+      font-size: 14px;
+      color: var(--second-color);
+      text-transform: capitalize;
+      padding-bottom: 10px;
+    }
+    span {
+      color: var(--main-color);
+      font-weight: bold;
+      font-size: 22px;
+    }
+  }
+  .options {
+    position: absolute;
+    text-align: center;
+    transition: 0.5s;
+    width: 100%;
+    bottom: -50px;
+    transition: 0.5s;
+    opacity: 0;
+
+    button {
+      width: 100%;
+      margin-bottom: 10px;
+      border: none;
+      outline: none;
+    }
+
+    .icons {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+
+      span {
+        transition: 0.3s;
+        &:hover {
+          color: var(--main-color);
+        }
+      }
+    }
+  }
+
+  .options.visible {
+    opacity: 1;
+    bottom: -25px;
+  }
+
+  .info.hidden {
+    opacity: 0;
+  }
+}

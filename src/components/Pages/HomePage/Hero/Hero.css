@@ -1,0 +1,60 @@
+.hero {
+  position: relative;
+  background-image: url(/bg1-1.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+
+  .container {
+    .info {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 10%;
+
+      h1 {
+        color: var(--second-color);
+        font-weight: bold;
+        text-transform: capitalize;
+        font-size: 4rem;
+
+        span {
+          font-weight: bold;
+          color: var(--main-color);
+        }
+      }
+
+      p {
+        font-family: "Pacifico", sans-serif;
+        padding: 1.5rem 0;
+        font-size: 23px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: 50vh;
+    background-size: cover;
+
+    .container {
+      .info {
+        left: 5rem;
+        text-align: center;
+        width: calc(100% - 10rem);
+
+        h1 {
+          font-size: 1.5rem;
+        }
+
+        p {
+          font-size: 16px;
+          padding: 1rem 0;
+        }
+      }
+    }
+  }
+}

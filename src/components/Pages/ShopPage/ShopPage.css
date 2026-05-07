@@ -1,0 +1,122 @@
+.shop_page {
+  .page-title {
+    margin: 1rem 0 5rem;
+    width: 100%;
+    background-color: #eee;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-transform: capitalize;
+    font-size: 18px;
+
+    h5 {
+      a {
+        color: #777;
+      }
+
+      span {
+        color: black;
+      }
+    }
+    .page-name {
+      color: var(--second-color);
+      font-weight: bolder;
+    }
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-around;
+
+    .products {
+      padding-left: 3rem;
+      .title {
+        text-align: left;
+        font-size: 2.5rem;
+      }
+      .products-container {
+        margin-top: 3rem;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        .product {
+          margin-bottom: 2rem;
+          .options {
+            position: absolute;
+            text-align: center;
+            transition: 0.5s;
+            width: 100%;
+            bottom: -250px;
+            transition: 0.5s;
+
+            button {
+              width: 100%;
+              margin-bottom: 10px;
+              border: none;
+              outline: none;
+            }
+
+            .icons {
+              display: flex;
+              align-items: center;
+              justify-content: space-evenly;
+
+              span {
+                transition: 0.3s;
+                &:hover {
+                  color: var(--main-color);
+                }
+              }
+            }
+          }
+
+          .options.visible {
+            bottom: -25px;
+          }
+
+          .info.hidden {
+            opacity: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .page_navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5rem;
+    gap: 5px;
+
+    a,
+    button {
+      border: none;
+      padding: 10px 1rem;
+      border-radius: 5px;
+      font-size: 22px;
+      background-color: var(--main-color);
+      color: white;
+      text-transform: capitalize;
+      cursor: pointer;
+
+      &.active {
+        background-color: var(--second-color);
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .shop_page {
+    .container {
+      .products {
+        .products-container {
+          justify-content: center;
+        }
+      }
+    }
+  }
+}

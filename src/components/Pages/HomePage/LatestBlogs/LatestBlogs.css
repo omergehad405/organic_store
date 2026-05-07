@@ -1,0 +1,26 @@
+.LBlogs {
+  margin: 5rem 0;
+  .container {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    .blog {
+      width: 350px;
+      height: 200px;
+      text-align: center;
+      position: relative;
+      img {
+        width: 100%;
+      }
+      h3 {
+        font-size: 17px;
+        font-weight: bold;
+        padding-top: 15px;
+      }
+    }
+  }
+}

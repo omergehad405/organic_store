@@ -1,0 +1,17 @@
+body {
+  background-color: #eee;
+}
+
+.header {
+  background: #e0e0e0;
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+
+  .container {
+    p {
+      color: var(--main-color);
+      font-size: 2rem;
+      text-transform: capitalize;
+      font-family: "Pacifico", sans-serif;
+    }
+  }
+}
